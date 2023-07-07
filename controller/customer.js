@@ -18,8 +18,12 @@ const createCustomer=async (req,res)=>{
         res.json(err)
       })
 }
+const distinctProduct=async(req,res)=>{
+  const distinct_product=await Customers.distinct("products");
+  res.json({"distict_products":distinct_product})
+}
 
 
-export {getCustomer,createCustomer}
+export {getCustomer,createCustomer,distinctProduct}
 
 

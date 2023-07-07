@@ -17,9 +17,11 @@ const transactionWithAccountId=async (req,res)=>{
     const data=await Transaction.find({"account_id":accountId})
     res.json(data)
 
-    // res.json({"message":"checking"})
-
-    
 }
 
-export {getAllTransaction,createTransaction,transactionWithAccountId} 
+const getAccountId=async(req,res)=>{
+    
+    res.json({"message":"fetching data"}) 
+}
+
+export {getAllTransaction,createTransaction,transactionWithAccountId,getAccountId} 
